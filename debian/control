@@ -1,13 +1,21 @@
-Source: rdma
+Source: rdma-utils
 Section: utils
 Priority: optional
-Maintainer: Alaa Hleihel <alaa@mellanox.com>
+Maintainer: Talat Batheesh <talatb@mellanox.com>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.6
-Homepage: https://github.com/alaahl/rdma
+Homepage: https://github.com/Mellanox/rdma-utils
 
-Package: rdma
+Package: rdma-utils
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Infiniband/iWARP Kernel Module Initializer
- User space initialization scripts for the kernel InfiniBand/iWARP drivers
+ User space initialization scripts for the kernel InfiniBand/iWARP drivers.
+ rdma-utils package allows InfiniBand users to manage user-level RDMA protocols that
+ want to be loaded by default, change port type to Ethernet or InfiniBand and
+ manage the SR-IOV for Mellanox ConnectX family adapter cards.
+ The rdma service is user space initialization scripts for the kernel InfiniBand
+ /iWARP drivers.
+ It reads the /etc/rdma/rdma.conf file to find out which kernel-level and
+ user-level RDMA protocols the administrator wants to be loaded by default. This
+ file can be modified to turn various drivers ON or OFF.

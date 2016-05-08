@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for rdma
+# postinst script for rdma-utils
 #
 
 set -e
@@ -18,5 +18,5 @@ case "$1" in
         exit 1
     ;;
 esac
-
+#DEBHELPER#
 exit 0

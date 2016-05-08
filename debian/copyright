@@ -1,14 +1,14 @@
 Initial Debianization:
 This package was debianized by Alaa Hleihel <alaa@mellanox.com> on
 Wed, 30 Dec 2015 11:36:11 +0200.
-It was downloaded from https://github.com/alaahl/rdma
+It was downloaded from https://github.com/Mellanox/rdma-utils
 
 Upstream-Name: rdma
 Source: rdma-7.2_4.1_rc6-1.el7.src.rpm
 
 Files: *
 Copyright: Copyright (c) 2008 Red Hat, Inc.
-           Copyright (c) 2015 Mellanox Technologies Ltd.
+           Copyright (c) 2015-2016 Mellanox Technologies Ltd.
 
 License: GPLv2+
 

@@ -1,4 +1,4 @@
-rdma (4.1-1) unstable; urgency=low
+rdma-utils (4.1-1) unstable; urgency=low
 
   * Initial release (Closes: #676403)
 
