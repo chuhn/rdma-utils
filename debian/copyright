@@ -5,6 +5,7 @@ It was downloaded from https://github.com/Mellanox/rdma-utils
 
 Upstream-Name: rdma
 Source: rdma-7.2_4.1_rc6-1.el7.src.rpm
+http://pkgs.fedoraproject.org/cgit/rpms/rdma.git/
 
 Files: *
 Copyright: Copyright (c) 2008 Red Hat, Inc.

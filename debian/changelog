@@ -1,3 +1,9 @@
+rdma-utils (4.1-1ubuntu1) unstable; urgency=medium
+
+  * Ship a systemd service file using dh-systemd
+
+ -- Talat Batheesh <talatb@dev-h-vrt-005.mth.labs.mlnx>  Mon, 09 May 2016 13:48:53 +0300
+
 rdma-utils (4.1-1) unstable; urgency=low
 
   * Initial release (Closes: #676403)

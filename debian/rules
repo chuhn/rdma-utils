@@ -11,7 +11,7 @@ pname := rdma-utils
 pversion := $(shell dpkg-parsechangelog | sed -n 's/^Version: *\([^-]\+\)-.\+/\1/p')
 
 %:
-	dh $@
+	dh $@ --with=systemd
 
 #
 # dh_make generated override targets
