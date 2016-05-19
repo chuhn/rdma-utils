@@ -1,11 +1,19 @@
-rdma-utils (4.1-1ubuntu1) unstable; urgency=medium
+rdma-utils (4.2-1.1) unstable; urgency=medium
+
+  * Ships udev rules and installs it under is /lib/udev/rules.d.
+  * add prerm file.
+  * Update version to 4.2. 
+
+ -- Talat Batheesh <talatb@mellanox.com>  Thu, 19 May 2016 15:57:26 +0300
+
+rdma-utils (4.1-1) unstable; urgency=medium
 
   * Ship a systemd service file using dh-systemd
 
- -- Talat Batheesh <talatb@dev-h-vrt-005.mth.labs.mlnx>  Mon, 09 May 2016 13:48:53 +0300
+ -- Talat Batheesh <talatb@mellanox.com>  Mon, 09 May 2016 13:48:53 +0300
 
 rdma-utils (4.1-1) unstable; urgency=low
 
-  * Initial release (Closes: #676403)
+  * Initial Debian release 
 
  -- Alaa Hleihel <alaa@mellanox.com>  Wed, 30 Dec 2015 11:36:11 +0200

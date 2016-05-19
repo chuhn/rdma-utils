@@ -17,10 +17,8 @@ pversion := $(shell dpkg-parsechangelog | sed -n 's/^Version: *\([^-]\+\)-.\+/\1
 # dh_make generated override targets
 #
 override_dh_auto_install:
-	dh_installdirs -p$(pname)  etc/udev/rules.d
-	install -m 0644 rdma.udev-ipoib-naming.rules  debian/$(pname)/etc/udev/rules.d/70-persistent-ipoib.rules
-
 	dh_installdirs -p$(pname)  lib/udev/rules.d
+	install -m 0644 rdma.udev-ipoib-naming.rules  debian/$(pname)/lib/udev/rules.d/70-persistent-ipoib.rules
 	install -m 0644 rdma.udev-rules       debian/$(pname)/lib/udev/rules.d/98-rdma.rules
 
 	dh_installdirs -p$(pname) etc/rdma
