@@ -1,0 +1,29 @@
+From: Christopher Huhn <C.Huhn@gsi.de>
+Date: Sat, 3 Mar 2018 10:01:36 +0100
+Subject: Fix paths for dracut module too
+
+---
+ rdma.modules-setup.sh | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/rdma.modules-setup.sh b/rdma.modules-setup.sh
+index 88412aa..d1892dc 100644
+--- a/rdma.modules-setup.sh
++++ b/rdma.modules-setup.sh
+@@ -13,11 +13,11 @@ install() {
+ 	inst /etc/rdma/rdma.conf
+ 	inst /etc/rdma/mlx4.conf
+ 	inst /etc/rdma/sriov-vfs
+-	inst /usr/libexec/rdma-init-kernel
+-	inst /usr/libexec/rdma-fixup-mtrr.awk
+-	inst /usr/libexec/mlx4-setup.sh
+-	inst /usr/libexec/rdma-set-sriov-vf
+-	inst /usr/lib/modprobe.d/libmlx4.conf
++	inst /sbin/rdma-init-kernel
++	inst /sbin/rdma-fixup-mtrr.awk
++	inst /sbin/mlx4-setup.sh
++	inst /sbin/rdma-set-sriov-vf
++	inst /lib/modprobe.d/libmlx4.conf
+ 	inst_multiple lspci setpci awk sleep
+ 	inst_multiple -o /etc/modprobe.d/mlx4.conf
+ 	inst_rules 98-rdma.rules 70-persistent-ipoib.rules
