@@ -1,3 +1,12 @@
+rdma-utils (4.2-1.2) unstable; urgency=medium
+
+  * Add config for git-buildpackage
+  * This package contains no binaries and it not architecture dependent
+  * Adapt paths in module-setup.sh for dracut
+  * Don't use systemd to invoke /sbin/rdma-init-kernel on boot
+
+ -- Christopher Huhn <C.Huhn@gsi.de>  Tue, 06 Mar 2018 13:13:47 +0100
+
 rdma-utils (4.2-1.1) unstable; urgency=medium
 
   * Ships udev rules and installs it under is /lib/udev/rules.d.
