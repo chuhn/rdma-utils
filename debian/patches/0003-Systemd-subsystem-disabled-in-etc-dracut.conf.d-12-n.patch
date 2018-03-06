@@ -1,0 +1,32 @@
+From: Christopher Huhn <C.Huhn@gsi.de>
+Date: Tue, 6 Mar 2018 09:17:21 +0100
+Subject: Systemd subsystem disabled in /etc/dracut.conf.d/12-no-systemd.conf,
+ therefore we call the one-shot init script directly
+
+---
+ rdma.udev-rules | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/rdma.udev-rules b/rdma.udev-rules
+index 0c7a8fc..b994fb1 100644
+--- a/rdma.udev-rules
++++ b/rdma.udev-rules
+@@ -4,12 +4,12 @@
+ # enable the IB stack, so do so unilaterally) and on load of any of that
+ # hardware, we trigger the rdma.service load in systemd
+ 
+-SUBSYSTEM=="module", KERNEL=="cxgb*", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="rdma.service"
+-SUBSYSTEM=="module", KERNEL=="ib_*", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="rdma.service"
+-SUBSYSTEM=="module", KERNEL=="mlx*", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="rdma.service"
+-SUBSYSTEM=="module", KERNEL=="iw_*", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="rdma.service"
+-SUBSYSTEM=="module", KERNEL=="be2net", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="rdma.service"
+-SUBSYSTEM=="module", KERNEL=="enic", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_WANTS}="rdma.service"
++SUBSYSTEM=="module", KERNEL=="cxgb*",  ACTION=="add", RUN+="/sbin/rdma-init-kernel"
++SUBSYSTEM=="module", KERNEL=="ib_*",   ACTION=="add", RUN+="/sbin/rdma-init-kernel"
++SUBSYSTEM=="module", KERNEL=="mlx*",   ACTION=="add", RUN+="/sbin/rdma-init-kernel"
++SUBSYSTEM=="module", KERNEL=="iw_*",   ACTION=="add", RUN+="/sbin/rdma-init-kernel"
++SUBSYSTEM=="module", KERNEL=="be2net", ACTION=="add", RUN+="/sbin/rdma-init-kernel"
++SUBSYSTEM=="module", KERNEL=="enic",   ACTION=="add", RUN+="/sbin/rdma-init-kernel"
+ 
+ # When we detect a new verbs device is added to the system, set the node
+ # description on that device
