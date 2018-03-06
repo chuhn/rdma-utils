@@ -1,0 +1,9 @@
+This package seems to originate from a conversion of the Redhat rdma-core package.
+
+The original sources seem to live at https://github.com/linux-rdma/rdma-core
+
+The contents of this repository lives in the redhat subdir of that repository.
+
+A Debian package for rdma-core exists already: https://tracker.debian.org/pkg/rdma-core
+
+ -- Christopher Huhn <C.Huhn@gsi.de>  Tue, 06 Mar 2018
